@@ -1,5 +1,5 @@
-pactl set-sink-volume 0 +5%;
-x=$(pamixer --get-volume);
+pactl set-sink-volume `cat ~/.config/i3/index.txt` +5%;
+x=$(pamixer --sink `cat ~/.config/i3/index.txt` --get-volume);
 echo $x;
 if [ $x -gt 100 ]
 then

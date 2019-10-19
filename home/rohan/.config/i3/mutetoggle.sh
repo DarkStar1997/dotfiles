@@ -1,12 +1,12 @@
-x=$(pamixer --get-mute)
+x=$(pamixer --sink `cat ~/.config/i3/index.txt` --get-mute)
 
 
 if [ "$x" = "false" ]
 then
-    pamixer -m
+    pamixer --sink `cat ~/.config/i3/index.txt` -m
     volnoti-show -m
 else 
-    vol=$(pamixer --get-volume);
-    pamixer -u
+    vol=$(pamixer --sink `cat ~/.config/i3/index.txt` --get-volume);
+    pamixer --sink `cat ~/.config/i3/index.txt` -u
     volnoti-show $vol  
 fi
