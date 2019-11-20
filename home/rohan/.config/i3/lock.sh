@@ -7,7 +7,9 @@ T='#8e8e8eee'  # text
 W='#2d92ffbb'  # wrong
 V='#ffffffbb'  # verifying
 
-i3lock \
+notify-send "DUNST_COMMAND_PAUSE"
+
+i3lock -n \
 --insidevercolor=$C   \
 --ringvercolor=$V     \
 \
@@ -32,5 +34,6 @@ i3lock \
 --clock               \
 --indicator           \
 --timestr="%H:%M:%S"  \
---datestr="%A, %m %Y"
+--datestr="%A, %m %Y";
 
+notify-send "DUNST_COMMAND_RESUME"
