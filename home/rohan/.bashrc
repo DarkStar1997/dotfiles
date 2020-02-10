@@ -21,8 +21,4 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig/
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.7/site-packages/
 export PATH="~/.gem/ruby/2.6.0/bin":$PATH
 
-
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bindings/bash/powerline.sh
+picom-trans -c 80
