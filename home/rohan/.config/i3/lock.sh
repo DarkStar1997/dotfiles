@@ -7,7 +7,7 @@ T='#8e8e8eee'  # text
 W='#2d92ffbb'  # wrong
 V='#ffffffbb'  # verifying
 
-notify-send "DUNST_COMMAND_PAUSE"
+dunstctl set-paused true
 
 i3lock -n \
 --insidevercolor=$C   \
@@ -36,4 +36,4 @@ i3lock -n \
 --timestr="%H:%M:%S"  \
 --datestr="%A, %m %Y";
 
-notify-send "DUNST_COMMAND_RESUME"
+dunstctl set-paused false
