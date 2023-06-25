@@ -1,39 +1,43 @@
 #!/bin/sh
 
-B='#00000000'  # blank
-C='#ffffff22'  # clear ish
-D='#8e8e8ecc'  # default
-T='#8e8e8eee'  # text
-W='#2d92ffbb'  # wrong
-V='#ffffffbb'  # verifying
+# using i3lock-color-git package from AUR
+
 
 dunstctl set-paused true
 
-i3lock -n \
---insidevercolor=$C   \
---ringvercolor=$V     \
+B='#00000011'  # blank
+C='#ffffff11'  # clear ish
+D='#2e2e2e'  # default
+T='#f2f2f2'  # text
+W='#5e5e5e'  # wrong
+V='#2e2e2e'  # verifying
+
+i3lock \
+--insidever-color=$C   \
+--ringver-color=$V     \
 \
---insidewrongcolor=$C \
---ringwrongcolor=$W   \
+--insidewrong-color=$C \
+--ringwrong-color=$W   \
 \
---insidecolor=$B      \
---ringcolor=$D        \
---linecolor=$B        \
---separatorcolor=$D   \
+--inside-color=$B      \
+--ring-color=$D        \
+--line-color=$B        \
+--separator-color=$D   \
 \
---verifcolor=$T        \
---wrongcolor=$T        \
---timecolor=$T        \
---datecolor=$T        \
---layoutcolor=$T      \
---keyhlcolor=$W       \
---bshlcolor=$W        \
+--verif-color=$T        \
+--wrong-color=$T        \
+--time-color=$T        \
+--date-color=$T        \
+--layout-color=$T      \
+--keyhl-color=$W       \
+--bshl-color=$W        \
 \
 --screen 1            \
---blur 10             \
+--blur 5              \
 --clock               \
 --indicator           \
---timestr="%H:%M:%S"  \
---datestr="%A, %m %Y";
+--time-str="%H:%M:%S"  \
+--date-str="%A, %m %Y" \
+--keylayout 1         \
 
 dunstctl set-paused false
